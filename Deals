@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stuff!!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <center>
+    <h1>Sweet deals!</h1>
+    <p id="demo">
+      
+    </p>
+<button onclick="goSomewhere()">Click Me</button>
+    </center>
+
+<script>
+var urls = [
+        "https://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338213245&mpre=https%3A%2F%2Fwww.ebay.com%2Fp%2FMicrosoft-Xbox-One-S-Battlefield-1-Storm-Gray-Special-Edition-Bundle-500GB-Gray-Console%2F230272054%3Fiid%3D222694542797",
+        'https://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338213245&mpre=https%3A%2F%2Fwww.ebay.com%2Fitm%2FApple-MacBook-Air-A1466-13-3-Laptop-MD231LL-A-June-2012-4-GB-128-GB-SSD%2F272921261727%3Fepid%3D115136931%26hash%3Ditem3f8b5ff69f%3Ag%3AOfMAAOSwdjdZ8PnB',
+        'https://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338213245&mpre=https%3A%2F%2Fwww.ebay.com%2Fitm%2FSlickBlue-Leatherette-Clip-On-Case-for-13-MacBook-Pro-Orange%2F282602706853%3Fhash%3Ditem41cc6f17a5%3Ag%3AA4IAAOSwDrlZiQ~C',
+        'https://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338213245&mpre=https%3A%2F%2Fwww.ebay.com%2Fitm%2F3-16-Small-Bubble-Wrap-your-stuff-Rolls-300-400-FT-FREE-SHIPPING-12-Inch-Wide%2F142572215020%3Fhash%3Ditem2131f75aec%3Ag%3AOMkAAOSwEaBZ-g1E',
+    ];
+
+    function goSomewhere() {
+        var url = urls[Math.floor(Math.random()*urls.length)];
+        window.location = url; // redirect
+    }
+</script>
+  </body>
+</html>
