@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trivia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <style>
+   #Q2{
+     display:none;
+   } #Q3{
+     display:none;
+   } #Q4{
+     display:none;
+   } 
+    
+    
+    </style>
+  </head>
+  <body>
+   <center><h1>
+      Car Trivia 🚗
+    </h1></center>
+ 
+ 
+    
+    
+      <div id="Q1" class="row">
+  <div class="col-md-6">
+     <h2>
+     Question #1: What Car Company Logo Is This
+    </h2> 
+    
+    <select  onchange="checkAnswer(this.value)">
+       <option value="0">Select</option>
+       <option value="0">Mercedes</option>
+       <option value="0">Audi</option>
+       <option value="1">Lamborghini</option>
+       <option value="0">Tesla</option>
+    </select>
+      </div>
+  <div class="col-md-6">
+   <img style="width:500px;" src="https://d2rhekw5qr4gcj.cloudfront.net/uploads/things/images/83491878_160123_1550_57.png">     
+</div>
+</div> 
+    
+    <div id="Q2" class="row">
+  <div class="col-md-6"> 
+   <h2>
+  Question #2: What Car Company Is This?
+    </h2>
+  <div onselect="checkAnswer(this.value)" >
+    <input type="radio" value="2" name="brand" onclick="checkAnswer(this.value)" >Chevy<br>
+    <input type="radio" value="0" name="brand" onclick="checkAnswer(this.value)" >GMC<br>
+    <input type="radio" value="0" name="brand" onclick="checkAnswer(this.value)" >BMW<br>
+    <input type="radio" value="0" name="brand" onclick="checkAnswer(this.value)" >Lincon<br>
+</div>
+ </div>
+  <div class="col-md-6">
+   <img style="width:500px;" src="https://listcarbrands.com/wp-content/uploads/2016/02/logo-Chevrolet.png">     
+</div>
+</div> 
+      <div id="Q3" class="row">
+  <div class="col-md-6"> 
+    <h2>
+      Question #3: What Car Company Are Under GM?
+    </h2>
+    <div>
+      <input id="C1" type="checkbox" name="vehicle"  onclick="checkAnswer(this.value)">Chevy<br>
+<input id="C2" type="checkbox" name="vehicle" onclick="checkAnswer(this.value)">GMC<br>
+<input id="C3" type="checkbox" name="vehicle"  onclick="checkAnswer(this.value)">Jeep<br>
+    <input id="C4" type="checkbox" name="vehicle"  onclick="checkAnswer(this.value)">Ford<br>
+    <button onclick="checkAnswer3()">Check Answer</button>
+    </div>
+    </div>
+  <div class="col-md-6">
+   <img style="width:500px;" src="https://visroof.co.za/wp-content/uploads/2015/02/General-Motors-logo-visible-improvements-client.png">     
+</div>
+</div> 
+
+ <div id="Q4" class="row">
+  <div class="col-md-6"> 
+   <h2>
+     Question #4: Who Makes The Best Cars?
+    </h2> 
+  <input id="text4" type="text" value="Answer">
+   <button onclick="checkAnswer(4)">Check Answer</button> 
+    
+ </div>
+  <div class="col-md-6">
+   <img style="width:500px;" src="https://media.caranddriver.com/images/media/51/2017-10best-lead-photo-672628-s-original.jpg">     
+</div>
+</div>    
+    <script>
+    function checkAnswer(Answer){
+      if (Answer ==0){
+       alert("Wrong") 
+      }   
+      if (Answer ==1){
+      alert("Correct!")
+      document.getElementById("Q1").style.display = 'none';
+      document.getElementById("Q2").style.display = 'block';
+    }
+    if (Answer ==2){
+     alert("Correct!") 
+     document.getElementById("Q2").style.display = 'none';
+     document.getElementById("Q3").style.display = 'block';
+  
+    }
+   
+    if (Answer ==4){
+     if (document.getElementById("text4").value.toLowerCase() =="chevy"){
+        alert("Correct!") 
+     document.getElementById("Q4").style.display = 'none';
+     document.getElementById("Q5").style.display = 'visibly';
+     }
+    else{
+       alert("Wrong")
+      if (document.getElementById("text4").value.toLowerCase() =="ford"){
+        alert("NO NO NO NO NO NO NO WHY JUST WHY!!!!!! Ford ist nicht gut")
+      }}}}
+    function checkAnswer3(){
+      var C1 = document.getElementById("C1").checked;
+       var C2 = document.getElementById("C2").checked;
+       var C3 = document.getElementById("C3").checked;
+       var C4 = document.getElementById("C4").checked;
+      
+      if(C1 == true && C2 == true && C3 == false && C4 == false){
+        alert("Correct")
+        document.getElementById("Q3").style.display = 'none';
+     document.getElementById("Q4").style.display = 'block';
+      }
+      
+    }
+    </script>
+  </body>
+</html>
