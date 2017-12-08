@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Still dre</h1>
+    <p>
+      make some sick beats
+    </p>
+    <p>
+      Try useing "Q,W,E,I,O,P"
+    </p>
+  </body>
+  <script>
+  var soundone = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fbetter%20sound%20one.mp3?1512057126398");
+    var soundtwo = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fbetter%20sound%20two.mp3?1512057126858");
+    var soundthree = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fbetter%20sound%20three.mp3?1512057126571");
+ var soundfour = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fsound%20four.mp3?1512143771377");
+ var soundfive = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fsound%20five.mp3?1512143771214");
+ var soundsix = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fsound%20six.mp3?1512143775982");
+  var soundseven = new Audio("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fsound%20seven.mp3?1512402931578");
+    var soundeight = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fsound%20eight.mp3?1512488662117");
+    var soundnine = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fsound%20nine.mp3?1512489307428");
+    var soundten = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fsound%20ten%20(mp3cut.net)%20(3).mp3?1512575678635");
+    var soundeleven = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2FHihat_Samples%20(mp3cut.net).mp3?1512660396703");
+    var soundtwelve = new Audio ("https://cdn.glitch.com/4ee3bbbf-cb2d-415b-8678-8d14cb831a47%2Fsound%20twelve.mp3?1512489307579");
+    var aflat =[
+    soundone,
+    soundtwo,
+    soundthree,
+      soundfour,
+      soundfive,
+      soundsix,
+      soundseven,
+      soundeight,
+      soundnine,
+      soundten,
+      soundeleven,
+      soundtwelve,
+  
+  ];
+    window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+
+  switch (event.key) {
+    case "i":
+      // Do something for "down arrow" key press.
+      soundone.play()
+      break;
+    case "o":
+      // Do something for "up arrow" key press.
+      soundtwo.play()
+      break;
+    case "p":
+      // Do something for "left arrow" key press.
+      soundthree.play()
+      break;
+    case "q":
+      // Do something for "right arrow" key press.
+      soundfour.play()
+      break;
+    case "w":
+      // Do something for "enter" or "return" key press.
+      soundfive.play()
+      break;
+    case "e":
+      // Do something for "esc" key press.
+      soundsix.play()
+      break;
+      case "g":
+      // Do something for "esc" key press.
+      soundnine.play()
+      break;
+      case "h":
+      // Do something for "esc" key press.
+      soundten.play()
+      break;
+      case "f":
+      // Do something for "esc" key press.
+      soundeleven.play()
+      break;
+      case "d":
+      // Do something for "esc" key press.
+      soundtwelve.play()
+      break;
+    case " ":
+      setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 500);
+     setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 1500);
+      setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 2000);
+            setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 2500);
+      setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 3000);
+      setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 3500);
+      setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 4000);
+            setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 4500);
+      setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 4500);
+      setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 5000);
+      setTimeout(function(){aflat[Math.floor(Math.random() * aflat.length)].play(); }, 5500);
+
+
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+function wait(ms){
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);
+Specification
+  </script>
+</html>
